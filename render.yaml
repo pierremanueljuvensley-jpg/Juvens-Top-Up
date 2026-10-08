@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: juvenstopup-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        value: https://wcgywmsbketjwfipcygj.supabase.co
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_FUNCTIONS_URL
+        value: https://wcgywmsbketjwfipcygj.supabase.co/functions/v1
+      - key: CORS_ORIGINS
+        value: https://juvenstopup.pages.dev
