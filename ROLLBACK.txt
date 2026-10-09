@@ -1,0 +1,7 @@
+Retour arrière manuel (si nécessaire) — à exécuter seulement après sauvegarde :
+  drop trigger transactions_no_update_delete / transactions_no_truncate on public.transactions;
+  drop trigger audit_logs_no_update_delete / audit_logs_no_truncate on public.audit_logs;
+  alter table public.orders add constraint orders_buyer_ref_key unique (buyer_ref);  -- échoue s'il existe des doublons
+  drop index public.orders_customer_buyer_ref_key;
+  Privilèges : re-GRANT explicite sur les tables concernées (non recommandé : voir audit).
+  Fonctions : recréer les définitions précédentes (visibles via pg_get_functiondef avant migration).
