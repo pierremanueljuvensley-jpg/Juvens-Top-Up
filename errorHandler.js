@@ -1,5 +1,5 @@
-import { AppError } from "../utils/errors.js";
-import { logger } from "../utils/logger.js";
+import { AppError } from "./errors.js";
+import { logger } from "./logger.js";
 
 const fail = (res, status, code, message) =>
   res.status(status).json({ success: false, error: { code, message } });

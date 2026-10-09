@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { requireAuth } from "../middleware/auth.js";
-import { sensitiveLimiter } from "../middleware/rateLimit.js";
-import { asyncHandler } from "../utils/asyncHandler.js";
-import { callFunction, callRpc } from "../services/supabase.js";
-import { relay } from "../services/relay.js";
-import { validatePurchase, validateUid, validateTopup } from "../validators.js";
+import { requireAuth } from "./auth.js";
+import { sensitiveLimiter } from "./rateLimit.js";
+import { asyncHandler } from "./asyncHandler.js";
+import { callFunction, callRpc } from "./supabase.js";
+import { relay } from "./relay.js";
+import { validatePurchase, validateUid, validateTopup } from "./validators.js";
 
 export const customerRouter = Router();
 customerRouter.use(requireAuth);

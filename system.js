@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { ping } from "../services/supabase.js";
-import { asyncHandler } from "../utils/asyncHandler.js";
+import { ping } from "./supabase.js";
+import { asyncHandler } from "./asyncHandler.js";
 
 // Routes publiques SANS rate limit (health check Render)
 export const publicRouter = Router();

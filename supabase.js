@@ -1,5 +1,5 @@
-import { env } from "../config/env.js";
-import { AppError } from "../utils/errors.js";
+import { env } from "./env.js";
+import { AppError } from "./errors.js";
 
 function headers(token) {
   const h = { Accept: "application/json", "Content-Type": "application/json" };

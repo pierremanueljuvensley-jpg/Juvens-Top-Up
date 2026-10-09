@@ -1,5 +1,5 @@
 import cors from "cors";
-import { env } from "../config/env.js";
+import { env } from "./env.js";
 
 const allowed = new Set(
   env.CORS_ORIGIN.split(",").map(x => x.trim().toLowerCase()).filter(Boolean)

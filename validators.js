@@ -1,5 +1,5 @@
-import { AppError } from "./utils/errors.js";
-import { env } from "./config/env.js";
+import { AppError } from "./errors.js";
+import { env } from "./env.js";
 
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 

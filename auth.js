@@ -1,5 +1,5 @@
-import { AppError } from "../utils/errors.js";
-import { getUser } from "../services/supabase.js";
+import { AppError } from "./errors.js";
+import { getUser } from "./supabase.js";
 
 // Authentification réelle : le JWT est validé par Supabase Auth (signature, expiration, utilisateur existant).
 // Le token est ensuite transmis tel quel aux Edge Functions / RPC, qui appliquent RLS et autorisation admin.

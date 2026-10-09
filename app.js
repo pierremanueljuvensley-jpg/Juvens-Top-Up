@@ -1,14 +1,14 @@
 import express from "express";
 import helmet from "helmet";
-import { env } from "./config/env.js";
-import { globalLimiter } from "./middleware/rateLimit.js";
-import { requestLogger } from "./middleware/requestLogger.js";
-import { errorHandler } from "./middleware/errorHandler.js";
-import { customerRouter } from "./routes/customer.js";
-import { adminRouter } from "./routes/admin.js";
-import { publicRouter, systemRouter } from "./routes/system.js";
-import { legacyRouter } from "./routes/legacy.js";
-import { corsMiddleware } from "./middleware/cors.js";
+import { env } from "./env.js";
+import { globalLimiter } from "./rateLimit.js";
+import { requestLogger } from "./requestLogger.js";
+import { errorHandler } from "./errorHandler.js";
+import { customerRouter } from "./customer.js";
+import { adminRouter } from "./admin.js";
+import { publicRouter, systemRouter } from "./system.js";
+import { legacyRouter } from "./legacy.js";
+import { corsMiddleware } from "./cors.js";
 
 const app = express();
 

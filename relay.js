@@ -1,4 +1,4 @@
-import { AppError } from "../utils/errors.js";
+import { AppError } from "./errors.js";
 
 const CODE_BY_STATUS = {
   400: "BAD_REQUEST", 401: "INVALID_TOKEN", 403: "FORBIDDEN", 404: "NOT_FOUND",
